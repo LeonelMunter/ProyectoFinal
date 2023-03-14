@@ -14,17 +14,17 @@ A continuación se muestran las rutas disponibles en el backend:
 ## Ruta houses
 
 `GET /houses/` => Ruta para obtener todas las casas <br>
-```json
+```javascript
 {res:{array}}
 ```
 `GET /houses/:id` => Ruta para obtener una casa por ID <br>
-```json
+```javascript
 {req:{params: id}
 res:{object}}
 ```
 
 `POST  /houses/` =>  Ruta para crear una nueva casa <br>
-```json
+```javascript
 {req:{
 body:{
     name: { type: String, required: true }, , //Nombre de la propiedad
@@ -46,7 +46,7 @@ body:{
 `PUT /houses/:id` => Ruta para actualizar 
 una casa existente <br>
 
-```json
+```javascript
 {req:{
     params:id
     body:{
@@ -68,7 +68,7 @@ una casa existente <br>
 ```
 
 `DELETE /houses/:id` => Ruta para eliminar una casa existente <br>
-```json
+```javascript
 {req:{
     params:id
 }}
