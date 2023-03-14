@@ -6,6 +6,8 @@ import i18n from "../i18n";
 import { changeTheme } from "../app/themeSlice";
 import { changeLanguage } from "../app/languageSlice";
 
+import Button from "./Button";
+
 const Navbar = () => {
   const themeValue = useSelector((state) => state.theme.theme);
   const currentLanguage = useSelector((state) => state.language.language);
@@ -36,25 +38,21 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-between dark:bg-gray-900">
-        <div>
-          <Link className="text-2xl pb-5 font-bold dark:text-gray-400" to="/">
+      <div className="flex flex-row items-center justify-between bg-slate-400 dark:bg-gray-800 p-5">
+        <div className="pl-5">
+          <Link className="text-2xl font-bold dark:text-gray-300" to="/">
             Home
           </Link>
         </div>
         <div className="flex flex-row">
-          <p className="text-xl pb-5 px-2 font-bold dark:text-gray-400">Projects</p>
-          <p className="text-xl pb-5 px-2 font-bold dark:text-gray-400">Projects</p>
-          <p className="text-xl pb-5 px-2 font-bold dark:text-gray-400">Projects</p>
+          <p className="text-xl px-2 font-bold dark:text-gray-300 uppercase">Projects</p>
+          <p className="text-xl px-2 font-bold dark:text-gray-300 uppercase">Projects</p>
+          <p className="text-xl px-2 font-bold dark:text-gray-300 uppercase">Projects</p>
         </div>
-        <div className="flex flex-row">
-          <button className="text-2xl pb-5 px-5 font-bold dark:text-gray-400" onClick={(event) => handleThemeChange(event)}>
-            {localThemeValue === "light" ? "Moon" : "Sun"}
-          </button>
-          <button className="flex flex-row text-2xl pb-5 px-5 font-bold dark:text-gray-400" onClick={(event) => handleLanguageChange(event)}>
-            {lng === "en" ? "EN" : lng === "es" ? "ES" : "AR"}
-          </button>
-          <button className="flex flex-row text-2xl pb-5 px-2 font-bold dark:text-gray-400">User</button>
+        <div className="flex flex-row pr-5">
+          <Button handle_click={(event) => handleThemeChange(event)} name={localThemeValue === "light" ? "moon" : "sun"} />
+          <Button handle_click={(event) => handleLanguageChange(event)} name={lng === "en" ? "en" : lng === "es" ? "es" : "ar"} lng={lng} />
+          <button className="flex flex-row text-2xl px-2 font-bold dark:text-gray-300 uppercase">User</button>
         </div>
       </div>
       <Outlet />

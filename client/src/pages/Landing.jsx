@@ -14,8 +14,8 @@ const Landing = () => {
         </div>
       </div>
       <div className="flex flex-col w-1/2 justify-center items-center">
-        <h2 className="text-3xl p-5 font-bold dark:text-gray-400">{t("project-name")}</h2>
-        <img src={imagePresentation} alt="engineers and architects" className="w-2/3" />
+        <h2 className="text-3xl p-5 font-bold dark:text-gray-300 uppercase">{t("project-name")}</h2>
+        <img src={imagePresentation} alt="engineers and architects" className="w-3/4" />
         <Link to="/home" className="text-xl font-bold bg-indigo-400 rounded-full px-3 py-1 dark:text-gray-300">
           {t("see-more")}
         </Link>
