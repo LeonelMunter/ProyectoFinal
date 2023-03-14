@@ -2,8 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 
-const homeSchema = new Schema({
-    //nombre
+const houseSchema = new Schema({
     name: { type: String, required: true }, // Nombre de la propiedad
     propertyType: { type: String, required: true }, // Tipo de propiedad (casa, apartamento, terreno, etc.)
     numRooms: { type: Number, required: true }, // Número de habitaciones
@@ -20,4 +19,4 @@ const homeSchema = new Schema({
             
   });
   
-  module.exports = mongoose.model('home', homeSchema);
+  module.exports = mongoose.model('house', houseSchema);
