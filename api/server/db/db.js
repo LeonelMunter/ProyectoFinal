@@ -1,19 +1,11 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
-// try {
+var {DB_URI}=process.env||{DB_URI:"mongodb://localhost:27017/test"}
+
 export const connect= async()=> {
-  await mongoose.connect('mongodb://127.0.0.1:27017/test')
+  await mongoose.connect(DB_URI)
   console.log("connect db")
 }
-  //     const Cat = mongoose.model('Cat', { name: String });
-  //     const kitty = new Cat({ name: 'Zildjian' });
-  //     kitty.save().then(() => console.log('meow'));
-  //     console.log("db connect")
-  // } catch (error) {
-  //   console.log(error)
-  // }
-
-
-
-// 

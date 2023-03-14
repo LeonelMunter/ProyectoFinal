@@ -19,4 +19,4 @@ const houseSchema = new Schema({
             
   });
   
-  module.exports = mongoose.model('house', houseSchema);
+export default mongoose.model('house', houseSchema);

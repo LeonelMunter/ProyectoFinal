@@ -18,3 +18,5 @@ router.put('/:id', updateHouse);
 
 // Ruta para eliminar una casa existente
 router.delete('/:id', deleteHouse);
+
+export default router;
