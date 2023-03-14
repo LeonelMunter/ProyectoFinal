@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-
 const houseSchema = new Schema({
     name: { type: String, required: true }, // Nombre de la propiedad
     propertyType: { type: String, required: true }, // Tipo de propiedad (casa, apartamento, terreno, etc.)
@@ -16,7 +15,6 @@ const houseSchema = new Schema({
     openings: { type: String, required: true }, // Especificaciones técnicas de las aberturas
     doors: { type: String, required: true }, // Especificaciones técnicas de las puertas
     project: { type: Schema.Types.ObjectId, ref: 'project' } // Referencia al proyecto al que pertenece la propiedad
-            
   });
   
 export default mongoose.model('house', houseSchema);
