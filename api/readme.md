@@ -27,8 +27,8 @@ res:{object}}
 ```json
 {req:{
 body:{
-    name: "required", //Nombre de la propiedad
-    propertyType:"required", // Tipo de propiedad (casa, apartamento, terreno, etc.)
+    name: { type: String, required: true }, , //Nombre de la propiedad
+    propertyType:{ type: String, required: true }, , // Tipo de propiedad (casa, apartamento, terreno, etc.)
     numRooms: { type: Number, required: true }, // Número de habitaciones
     numBathrooms: { type: Number, required: true }, // Número de baños
     squareMeters: { type: Number, required: true }, // Tamaño de la propiedad en metros cuadrados
