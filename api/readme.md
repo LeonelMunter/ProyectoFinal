@@ -15,12 +15,12 @@ A continuación se muestran las rutas disponibles en el backend:
 
 `GET /houses/` => Ruta para obtener todas las casas <br>
 ```json
-res:{array}
+{res:{array}}
 ```
 `GET /houses/:id` => Ruta para obtener una casa por ID <br>
 ```json
-req:{params: id}
-res:{object}
+{req:{params: id}}
+{res:{object}}
 ```
 
 `POST  /houses/` =>  Ruta para crear una nueva casa <br>
