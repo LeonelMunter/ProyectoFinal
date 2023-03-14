@@ -15,17 +15,17 @@ A continuación se muestran las rutas disponibles en el backend:
 
 `GET /houses/` => Ruta para obtener todas las casas <br>
 ```json
-res:{array}
+{res:{array}}
 ```
 `GET /houses/:id` => Ruta para obtener una casa por ID <br>
 ```json
-req:{params: id}
-res:{object}
+{req:{params: id}
+res:{object}}
 ```
 
 `POST  /houses/` =>  Ruta para crear una nueva casa <br>
 ```json
-req:{
+{req:{
 body:{
     name: "required", //Nombre de la propiedad
     propertyType:"required", // Tipo de propiedad (casa, apartamento, terreno, etc.)
@@ -41,13 +41,13 @@ body:{
     doors: { type: String, required: true }, // Especificaciones técnicas de las puertas
     project: { type: Schema.Types.ObjectId, ref: 'project' } // Referencia al proyecto al que pertenece la propiedad
 }
-}
+}}
 ```
 `PUT /houses/:id` => Ruta para actualizar 
 una casa existente <br>
 
 ```json
-req:{
+{req:{
     params:id
     body:{
          name,
@@ -64,14 +64,14 @@ req:{
         doors,
         project
     }
-}
+}}
 ```
 
 `DELETE /houses/:id` => Ruta para eliminar una casa existente <br>
 ```json
-req:{
+{req:{
     params:id
-}
+}}
 
 
 ```
