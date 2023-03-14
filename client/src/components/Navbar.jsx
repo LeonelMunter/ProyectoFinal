@@ -1,9 +1,10 @@
-import { Outlet } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Outlet, Link } from "react-router-dom";
+
+import i18n from "../i18n";
 import { changeTheme } from "../app/themeSlice";
 import { changeLanguage } from "../app/languageSlice";
-import i18n from "../i18n";
 
 const Navbar = () => {
   const themeValue = useSelector((state) => state.theme.theme);
@@ -11,6 +12,7 @@ const Navbar = () => {
 
   const [localThemeValue, setLocalThemeValue] = useState(themeValue);
   const [lng, setLng] = useState(currentLanguage);
+
   const htmlDoc = document.documentElement;
 
   const dispatch = useDispatch();
@@ -34,13 +36,26 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex dark:bg-gray-900">
-        <button className="text-2xl pb-8 font-bold dark:text-gray-400" onClick={(event) => handleThemeChange(event)}>
-          {localThemeValue === "light" ? "LIGTH THEME" : "DARK THEME"}
-        </button>
-        <button className="flex flex-row pb-8 font-bold dark:text-gray-400" onClick={(event) => handleLanguageChange(event)}>
-          {lng === "en" ? "LNG EN" : lng === "es" ? "LNG ES" : "LNG AR"}
-        </button>
+      <div className="flex flex-row items-center justify-between dark:bg-gray-900">
+        <div>
+          <Link className="text-2xl pb-5 font-bold dark:text-gray-400" to="/">
+            Home
+          </Link>
+        </div>
+        <div className="flex flex-row">
+          <p className="text-xl pb-5 px-2 font-bold dark:text-gray-400">Projects</p>
+          <p className="text-xl pb-5 px-2 font-bold dark:text-gray-400">Projects</p>
+          <p className="text-xl pb-5 px-2 font-bold dark:text-gray-400">Projects</p>
+        </div>
+        <div className="flex flex-row">
+          <button className="text-2xl pb-5 px-5 font-bold dark:text-gray-400" onClick={(event) => handleThemeChange(event)}>
+            {localThemeValue === "light" ? "Moon" : "Sun"}
+          </button>
+          <button className="flex flex-row text-2xl pb-5 px-5 font-bold dark:text-gray-400" onClick={(event) => handleLanguageChange(event)}>
+            {lng === "en" ? "EN" : lng === "es" ? "ES" : "AR"}
+          </button>
+          <button className="flex flex-row text-2xl pb-5 px-2 font-bold dark:text-gray-400">User</button>
+        </div>
       </div>
       <Outlet />
     </>
