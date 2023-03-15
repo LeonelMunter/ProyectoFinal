@@ -76,6 +76,13 @@ una casa existente <br>
 
 ```
 
+## Ruta material
+
+## Ruta employee
+
+
+
+
 # Canal de Error
 
  Sabemos que a veces pueden ocurrir errores en el Backend en la api. Para ayudarnos a solucionarlos de manera más eficiente, hemos creado un canal de `back errors`. Por favor, si encuentras algún error o si hay una funcionalidad que falta, no dudes en reportarlo de manera específica y detallada en este canal para que podamos solucionarlo lo antes posible.
@@ -83,6 +90,7 @@ una casa existente <br>
  ### Posibles errores en:
 
  - Rutas
+
  
 
 ### Canal

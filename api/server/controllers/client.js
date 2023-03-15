@@ -1,7 +1,7 @@
-import client from '../models/client'
+import client from '../models/client.js'
 
 // GET /client - Obtiene todas las client
-export const getAllclients = async (req, res) => {
+export const getAllClients = async (req, res) => {
     try {
         const client = await client.find();
         res.status(200).json(client);
@@ -28,5 +28,28 @@ export const createClient = async (req, res) => {
         res.status(201).json(newClient);
     } catch (error) {
         res.status(409).json({ message: error.message });
+    }
+}
+
+// PATCH /client/:id - Actualiza una casa existente
+export const updateClient = async (req, res) => {
+
+        
+}
+
+// DELETE /client/:id - Elimina una casa existente
+export const deleteClient = async (req, res) => {
+    try{
+        const {id}= req.params
+        const clientId = await client.findById(id)
+        if(!clientId){
+            return res.status(404).json({ message: "Cliente no encontrado" });
+
+        }
+        await clientId.remove()
+    }
+    catch (error){
+        res.status(404).json({ message: error.message });
+
     }
 }

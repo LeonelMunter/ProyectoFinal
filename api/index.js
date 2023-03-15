@@ -1,4 +1,4 @@
-
+console.clear();
 import express from 'express'
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -23,3 +23,4 @@ server.listen(port,()=>{
 
 
 connect()
+
