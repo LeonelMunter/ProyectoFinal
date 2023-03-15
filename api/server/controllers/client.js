@@ -9,7 +9,7 @@ export const getAllclients = async (req, res) => {
         res.status(404).json({ message: error.message });
     }
 }
-// get cliente
+
 // GET /client/:id - Obtiene una casa por ID
 export const getClientById = async (req, res) => {
     try {
