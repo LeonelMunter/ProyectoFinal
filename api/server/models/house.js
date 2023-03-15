@@ -9,12 +9,14 @@ const houseSchema = new Schema({
     numBathrooms: { type: Number, required: true }, // Número de baños
     squareMeters: { type: Number, required: true }, // Tamaño de la propiedad en metros cuadrados
     surfaceArea: { type: String, required: true }, // Superficie que ocupa la propiedad
+    pool: {type: String, require: true }, // Si tiene piscina
     price: { type: Number, required: true }, // Precio de venta de la propiedad
     plumbing: { type: String, required: true }, // Especificaciones técnicas de las cañerías
     roofing: { type: String, required: true }, // Especificaciones técnicas del techo
     walls: { type: String, required: true }, // Especificaciones técnicas de las paredes
     openings: { type: String, required: true }, // Especificaciones técnicas de las aberturas
-    doors: { type: String, required: true }, // Especificaciones técnicas de las puertas
+    doors: { type: String, required: true },
+    images: { type: Array, default: []}, // Especificaciones técnicas de las puertas
     project: { type: Schema.Types.ObjectId, ref: 'project' } // Referencia al proyecto al que pertenece la propiedad
             
   });
