@@ -1,4 +1,5 @@
-console.clear();
+// console.clear();
+import devUtilFunc from './server/util.dev/index.js'
 import express from 'express'
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -7,7 +8,7 @@ import {connect} from './server/db/db.js'
 import router from './server/routes';
 
 dotenv.config();
-
+devUtilFunc()
 const server=express()
 const port=5000
 

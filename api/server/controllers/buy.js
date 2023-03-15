@@ -33,7 +33,25 @@ export const createBuy = async (req, res) => {
 
 // PATCH /buy/:id - Actualiza una compra existente
 export const updateBuy = async (req, res) => {
-    
+    try{
+        const { id } = req.params;
+        const buyId = await buy.findById(id);
+        const {material,amount,purchaseDate,provider,cost}=req.body
+        if(!buyId){
+            res.status(404).json({message:"la intidad de la compra no existe"})
+        }
+        buyId.material=material
+        buyId.amount=amount
+        buyId.purchaseDate=purchaseDate
+        buyId.provider=provider
+        buyId.cost=cost
+        const updateBuys= await buy.save();
+
+        res.status(200).json(updateBuys)
+
+    }catch (error){
+        res.status(404).json({ message: error.message });  
+    }
 }
 
 // DELETE /buy/:id - Elimina una compra existente

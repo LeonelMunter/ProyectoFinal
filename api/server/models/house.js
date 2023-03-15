@@ -16,8 +16,12 @@ const houseSchema = new Schema({
     openings: { type: String, required: true }, // Especificaciones técnicas de las aberturas
     doors: { type: String, required: true },
     images: { type: Array, default: []}, // Especificaciones técnicas de las puertas
-    project: { type: Schema.Types.ObjectId, ref: 'project' } // Referencia al proyecto al que pertenece la propiedad
-            
+    materials: { type: Array, default: []}, // Materiales que se utilizarán en la construcción de la propiedad
   });
+
+  console.log("adas")
+
+
+
   
 export default mongoose.model('house', houseSchema);

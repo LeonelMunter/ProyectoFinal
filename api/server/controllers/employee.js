@@ -35,33 +35,27 @@ export const createEmployee = async (req, res) => {
 export const updateEmployee = async (req, res) => {
     try {
       const { id } = req.params;
-      const employee = await employee.findById(id);
+      const employeeId = await employee.findById(id);
   
-      if (!employee) {
+      if (!employeeId) {
         return res.status(404).json({ message: "Empleado no encontrado" });
       }
   
       // Actualizar el empleado con los nuevos datos
       const { 
-        name,
-        lastName,
-        email,
-        password,
-        phone,
-        address,
-        role
+        name,userName,avatar,phone,email,password,role
        } = req.body;
-        employee.name = name;
-        employee.lastName = lastName;
-        employee.email = email;
-        employee.password = password;
-        employee.phone = phone;
-        employee.address = address;
-        employee.role = role;
+        employeeId.name = name;
+        employeeId.userName=userName;
+        employeeId.avatar=avatar;
+        employeeId.email = email;
+        employeeId.password = password;
+        employeeId.phone = phone;
+        employeeId.role = role;
   
-      await employee.save();
+      await employeeId.save();
   
-      res.status(200).json(employee);
+      res.status(200).json(employeeId);
     } catch (error) {
       res.status(409).json({ message: error.message });
     }

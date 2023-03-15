@@ -33,6 +33,28 @@ export const createClient = async (req, res) => {
 
 // PATCH /client/:id - Actualiza una casa existente
 export const updateClient = async (req, res) => {
+    try{
+        const {id}= req.params
+        const clientId= await client.findById(id)
+        
+      if (!clientId) {
+        return res.status(404).json({ message: "Cliente no encontrado" });
+      }
+        const { name,userName,avatar,phone,address,email,password,registrationDate} = req.body
+        clientId.name=name
+        clientId.userName=userName
+        clientId.avatar=avatar
+        clientId.phone=phone
+        clientId.address=address
+        clientId.email=email
+        clientId.password=password
+        clientId.registrationDate=registrationDate
+       await clientId.save()
+       res.status(200).json(employeeId);
+
+    }catch(error){
+        res.status(500).json({message: error.message})
+    }
 
         
 }
@@ -49,7 +71,7 @@ export const deleteClient = async (req, res) => {
         await clientId.remove()
     }
     catch (error){
-        res.status(404).json({ message: error.message });
-
+        res.status(500).json({ message: error.message });
+        
     }
 }
