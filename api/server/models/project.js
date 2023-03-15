@@ -9,4 +9,5 @@ const projectSchema = new Schema({
   client: { type: Schema.Types.ObjectId, ref: 'client' }, // referencia al cliente del proyecto
 });
 
-module.exports = mongoose.model('project', projectSchema);
+
+export default mongoose.model('project', projectSchema);

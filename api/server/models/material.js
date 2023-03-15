@@ -10,4 +10,5 @@ const materialSchema = new Schema({
     image: { type: String, required: true } // imagen del material
   });
   
-  module.exports = mongoose.model('material', materialSchema);
+
+  export default mongoose.model('material', materialSchema);
