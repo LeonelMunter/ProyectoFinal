@@ -1,4 +1,3 @@
-
 import house from '../models/house.js';
 
 // GET /houses - Obtiene todas las casas
