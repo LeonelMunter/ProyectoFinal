@@ -1,0 +1,122 @@
+{
+  "materiales": [
+    {
+      "id": 1,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 2.5,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/7.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 4,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/1.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 1.5,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/7.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 4,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/2.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 5,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/1.png"
+    },
+    {
+      "id": 6,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 4,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/7.png"
+    },
+    {
+      "id": 7,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 4,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/2.png"
+    },
+    {
+      "id": 8,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 4,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/1.png"
+    },
+    {
+      "id": 9,
+      "nombre": "Ladrillo",
+      "descripcion": "Bloque de construcción hecho de arcilla cocida",
+      "precio_unitario": 1.5,
+      "unidad_de_medida": "unidad",
+      "dimensiones": "10cm x 20cm x 5cm",
+      "peso": "2 kg",
+      "tipo": "ladrillo común",
+      "estrellas": 3.5,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/7.png"
+    },
+    {
+      "id": 10,
+      "nombre": "Cemento",
+      "descripcion": "Material de construcción utilizado como aglutinante en la mezcla de hormigón y mortero",
+      "precio_unitario": 5.0,
+      "unidad_de_medida": "saco",
+      "tipo": "cemento común",
+      "estrellas": 4.5,
+      "imagen": "https://ladrilloslark.com.pe/wp-content/uploads/2018/09/2.png"
+    }
+  ]
+}

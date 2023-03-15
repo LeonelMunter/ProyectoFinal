@@ -45,9 +45,15 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex flex-row">
-          <p className="text-xl px-2 font-bold dark:text-gray-300 uppercase">Projects</p>
-          <p className="text-xl px-2 font-bold dark:text-gray-300 uppercase">Projects</p>
-          <p className="text-xl px-2 font-bold dark:text-gray-300 uppercase">Projects</p>
+          <Link to="/products" className="text-xl px-2 font-bold dark:text-gray-300 uppercase">
+            Productos
+          </Link>
+          <Link to="/quote" className="text-xl px-2 font-bold dark:text-gray-300 uppercase">
+            Cotizar
+          </Link>
+          <Link to="/subsidiaries" className="text-xl px-2 font-bold dark:text-gray-300 uppercase">
+            Ubicanos
+          </Link>
         </div>
         <div className="flex flex-row pr-5">
           <Button handle_click={(event) => handleThemeChange(event)} name={localThemeValue === "light" ? "moon" : "sun"} />
