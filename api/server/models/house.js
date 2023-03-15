@@ -9,6 +9,7 @@ const houseSchema = new Schema({
     numBathrooms: { type: Number, required: true }, // Número de baños
     squareMeters: { type: Number, required: true }, // Tamaño de la propiedad en metros cuadrados
     surfaceArea: { type: String, required: true }, // Superficie que ocupa la propiedad
+    pool: {type: String, require: true }, // Si tiene piscina
     price: { type: Number, required: true }, // Precio de venta de la propiedad
     plumbing: { type: String, required: true }, // Especificaciones técnicas de las cañerías
     roofing: { type: String, required: true }, // Especificaciones técnicas del techo
