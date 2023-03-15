@@ -6,6 +6,9 @@ import Navbar from "./components/Navbar";
 /* pages */
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Quote from "./pages/Quote";
+import Subsidiaries from "./pages/Subsidiaries";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/quote",
+        element: <Quote />,
+      },
+      {
+        path: "/subsidiaries",
+        element: <Subsidiaries />,
       },
     ],
   },
