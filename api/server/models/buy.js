@@ -10,4 +10,4 @@ const buySchema = new Schema({
     cost: { type: Number, required: true } // Costo total de la compra
 });
 
-module.exports = mongoose.model('buy', buySchema);
+export default mongoose.model('buy', buySchema);

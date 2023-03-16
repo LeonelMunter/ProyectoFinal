@@ -1,5 +1,6 @@
-
 import house from '../models/house.js';
+
+
 
 // GET /houses - Obtiene todas las casas
 export const getAllHouses = async (req, res) => {
@@ -44,19 +45,7 @@ export const updateHouse = async (req, res) => {
   
       // Actualizar la casa con los nuevos datos
       const { 
-        name,
-        propertyType,
-        numRooms,
-        numBathrooms,
-        squareMeters,
-        surfaceArea,
-        price,
-        plumbing,
-        roofing,
-        walls,
-        openings,
-        doors,
-        project
+        name,propertyType,numRooms,numBathrooms,squareMeters,surfaceArea,pool,price,plumbing,roofing,walls,openings,doors,images,materials
 
        } = req.body;
         house.name = name;
@@ -71,7 +60,9 @@ export const updateHouse = async (req, res) => {
         house.walls = walls;
         house.openings = openings;
         house.doors = doors;
-        house.project = project;
+        house.images = images;
+        house.materials = materials;
+        house.pool = pool;
 
       await house.save();
       res.json({ message: "Casa actualizada exitosamente" });

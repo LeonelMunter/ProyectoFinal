@@ -7,6 +7,8 @@ const projectSchema = new Schema({
   endDate: { type: Date }, // fecha de finalización del proyecto
   address: { type: String, required: true }, // dirección del proyecto
   client: { type: Schema.Types.ObjectId, ref: 'client' }, // referencia al cliente del proyecto
+  house: { type: Schema.Types.ObjectId, ref: 'house' } // referencia a la casa del proyecto
 });
 
-module.exports = mongoose.model('project', projectSchema);
+
+export default mongoose.model('project', projectSchema);
